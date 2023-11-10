@@ -16,7 +16,6 @@ export default function MovieBanner({ movies }: { movies: Movie[] }) {
 				loop={true}
 				navigation={true}
 				modules={[Pagination, Navigation]}
-				className='mySwiper'
 			>
 				{movies.map((movie: Movie) => (
 					<SwiperSlide

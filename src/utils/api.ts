@@ -1,20 +1,29 @@
+import { Movie } from "../interfaces/movie.interface"
+
 const API_KEY = '810ba574a37135c7008528d7643e1dc8'
 
-const apiUrls = {
+interface ApiUrls {
+	[key: string]: {
+		title: string
+		url: string
+	}
+}
+
+const apiUrls: ApiUrls = {
 	trendingMovies: {
-		title: 'Trending',
+		title: 'Populares',
 		url: `/trending/movie/week?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
 	toRatedMovies: {
-		title: 'Top Rated',
+		title: 'Melhores',
 		url: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
 	actionMovies: {
-		title: 'Action',
+		title: 'Ação',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=28&language=pt-BR&region=BR`,
 	},
 	comedyMovies: {
-		title: 'Comedy',
+		title: 'Comédia',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=35&language=pt-BR&region=BR`,
 	},
 	horrorMovies: {
@@ -26,7 +35,7 @@ const apiUrls = {
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=10749&language=pt-BR&region=BR`,
 	},
 	mysteryMovies: {
-		title: 'Mystery',
+		title: 'Mistério',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=9648&language=pt-BR&region=BR`,
 	},
 	sciFiMovies: {
@@ -34,20 +43,20 @@ const apiUrls = {
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=878&language=pt-BR&region=BR`,
 	},
 	westernMovies: {
-		title: 'Western',
+		title: 'Faroeste',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=37&language=pt-BR&region=BR`,
 	},
 	animationMovies: {
-		title: 'Animation',
+		title: 'Animação',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=16&language=pt-BR&region=BR`,
 	},
 	tvMovies: {
-		title: 'TV Movie',
+		title: 'Sessão da Tarde',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=10770&language=pt-BR&region=BR`,
 	},
 }
 
-async function fetchMovieData(endpoint: string) {
+async function fetchMovieData(endpoint: string): Promise<Movie[]> {
 	try {
 		const response = await fetch(
 			`https://api.themoviedb.org/3${apiUrls[endpoint]?.url}`
@@ -56,11 +65,11 @@ async function fetchMovieData(endpoint: string) {
 			throw new Error('Erro ao buscar dados da API')
 		}
 		const data = await response.json()
-		return data
+		return data.results
 	} catch (error) {
 		console.error(error)
 		throw error
 	}
 }
 
-export { fetchMovieData }
+export { fetchMovieData, apiUrls }

@@ -1,0 +1,36 @@
+.swiper {
+	width: 100%;
+}
+
+.swiper-categories {
+	height: 100px;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide-category {
+	display: flex !important;
+}
+
+.slide-category:hover {
+	cursor: grab;
+	transform: scale(1.5);
+	transition: all 0.3s ease-in-out;
+}
+
+.slide-category:active {
+	cursor: grabbing;
+}
