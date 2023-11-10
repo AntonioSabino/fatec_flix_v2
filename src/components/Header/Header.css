@@ -1,0 +1,32 @@
+.header {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	gap: 16px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo {
+	width: 30%;
+}
+
+.header nav ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.header nav ul li a {
+	color: var(--font-primary);
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+#search-movie {
+	flex: 1;
+	padding: 14px;
+	border: none;
+	border-radius: 999px;
+	font-size: 16px;
+	outline: none;
+}

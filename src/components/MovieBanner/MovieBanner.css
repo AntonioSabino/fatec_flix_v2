@@ -1,0 +1,24 @@
+.movie-banner {
+	width: calc(100% - 20px);
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 50vh;
+	min-height: 400px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.movie-banner-title {
+	flex: 1;
+	font-size: 24px;
+	color: #fff;
+	background: linear-gradient(to left, transparent, #000);
+	padding: 10px 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
