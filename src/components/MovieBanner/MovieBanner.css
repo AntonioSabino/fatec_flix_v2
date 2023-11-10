@@ -1,21 +1,24 @@
+.swiper {
+	max-width: 1200px;
+}
+
 .movie-banner {
-	width: calc(100% - 20px);
 	max-width: 1200px;
 	margin: 0 auto;
-	height: 50vh;
-	min-height: 400px;
+	min-height: 500px;
 	border-radius: 10px;
-	overflow: hidden;
-	display: flex;
 	background-size: cover;
+	background-position-x: center;
+	background-position-y: top;
 	cursor: pointer;
 }
 
 .movie-banner-title {
-	flex: 1;
 	font-size: 24px;
 	color: #fff;
 	background: linear-gradient(to left, transparent, #000);
+	max-width: 1200px;
+	min-height: 500px;
 	padding: 10px 20px;
 	border-radius: 10px;
 	display: flex;
