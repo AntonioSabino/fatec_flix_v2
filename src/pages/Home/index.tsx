@@ -11,8 +11,11 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import { Navigate } from 'react-router-dom'
 
 function Home() {
+	const isLogged = localStorage.getItem('user')
+
 	const [category, setCategory] = useState<string>('trendingMovies')
 	const [movies, setMovies] = useState<Movie[]>([])
 	const [bannerMovies, setBannerMovies] = useState<Movie[]>([])
@@ -26,6 +29,15 @@ function Home() {
 
 		fetchMovies().catch(console.error)
 	}, [category])
+
+	if (!isLogged) {
+		return (
+			<Navigate
+				to='/signin'
+				replace={true}
+			/>
+		)
+	}
 
 	return (
 		<>

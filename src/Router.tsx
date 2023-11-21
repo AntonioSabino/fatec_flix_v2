@@ -1,32 +1,33 @@
-import {
-	createBrowserRouter,
-	createRoutesFromElements,
-	Route,
-	RouterProvider,
-} from 'react-router-dom'
-import DefaultLayout from './layouts/DefaultLayout'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { SignIn } from './components/Signin'
+import { SignUp } from './components/Signup'
 import Home from './pages/Home'
+import DefaultLayout from './layouts/DefaultLayout'
 
-const router = createBrowserRouter(
-	createRoutesFromElements(
-		<>
-			<Route
-				path='/'
-				element={<DefaultLayout />}
-			>
+const AppRouter = () => {
+	return (
+		<Router>
+			<Routes>
+				<Route
+					path='/signin'
+					element={<SignIn />}
+				/>
+				<Route
+					path='/signup'
+					element={<SignUp />}
+				/>
 				<Route
 					path='/'
-					element={<Home />}
-				/>
-			</Route>
-			<Route
-				path='/login'
-				element={<h1>Login</h1>}
-			/>
-		</>
+					element={<DefaultLayout />}
+				>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+				</Route>
+			</Routes>
+		</Router>
 	)
-)
-
-export default function Router() {
-	return <RouterProvider router={router} />
 }
+
+export default AppRouter
