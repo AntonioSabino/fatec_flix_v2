@@ -3,6 +3,7 @@ import { SignIn } from './components/Signin'
 import { SignUp } from './components/Signup'
 import Home from './pages/Home'
 import DefaultLayout from './layouts/DefaultLayout'
+import MovieDetail from './components/MovieDetail'
 
 const AppRouter = () => {
 	return (
@@ -23,6 +24,10 @@ const AppRouter = () => {
 					<Route
 						path='/'
 						element={<Home />}
+					/>
+					<Route
+						path='/movie/:id'
+						element={<MovieDetail />}
 					/>
 				</Route>
 			</Routes>

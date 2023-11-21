@@ -72,4 +72,20 @@ async function fetchMovieData(endpoint: string): Promise<Movie[]> {
 	}
 }
 
-export { fetchMovieData, apiUrls }
+async function fetchMovieDetails(id: number): Promise<Movie> {
+	try {
+		const response = await fetch(
+			`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR&region=BR`
+		)
+		if (!response.ok) {
+			throw new Error('Erro ao buscar dados da API')
+		}
+		const data = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+		throw error
+	}
+}
+
+export { fetchMovieData, fetchMovieDetails, apiUrls }

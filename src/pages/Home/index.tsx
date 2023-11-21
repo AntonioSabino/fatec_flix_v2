@@ -39,6 +39,8 @@ function Home() {
 		)
 	}
 
+	console.log(movies)
+
 	return (
 		<>
 			<Swiper
