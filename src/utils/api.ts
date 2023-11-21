@@ -1,4 +1,4 @@
-import { Movie } from "../interfaces/movie.interface"
+import { Movie, MovieLink } from "../interfaces/movie.interface"
 
 const API_KEY = '810ba574a37135c7008528d7643e1dc8'
 
@@ -88,4 +88,20 @@ async function fetchMovieDetails(id: number): Promise<Movie> {
 	}
 }
 
-export { fetchMovieData, fetchMovieDetails, apiUrls }
+async function fetchMovieWatchProviders(id: number): Promise<MovieLink> {
+	try {
+		const response = await fetch(
+			`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${API_KEY}`
+		)
+		if (!response.ok) {
+			throw new Error('Erro ao buscar dados da API')
+		}
+		const data = await response.json()
+		return data.results.BR
+	} catch (error) {
+		console.error(error)
+		throw error
+	}
+}
+
+export { fetchMovieData, fetchMovieDetails, fetchMovieWatchProviders, apiUrls }

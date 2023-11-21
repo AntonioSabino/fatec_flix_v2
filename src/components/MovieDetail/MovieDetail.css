@@ -1,0 +1,38 @@
+.movie-detail-container {
+	display: flex;
+	margin: 20px;
+}
+
+.movie-detail-container img {
+	max-height: 80vh;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-right: 20px;
+}
+
+.movie-detail-info {
+	flex: 1;
+}
+
+.movie-detail-info h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.movie-detail-info p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+.providers-info ul {
+	margin: 16px 0;
+	list-style-type: none;
+	display: flex;
+}
+
+.provider-logo {
+	width: 50px;
+	height: auto;
+	margin-right: 10px;
+}

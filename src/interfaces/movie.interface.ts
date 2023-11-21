@@ -7,3 +7,17 @@ export interface Movie {
   overview: string
   release_date: string
 }
+
+export interface MovieLink {
+  link: string;
+  rent: MovieProvider[];
+  flatrate: MovieProvider[];
+  buy: MovieProvider[];
+}
+
+interface MovieProvider {
+  logo_path: string;
+  provider_id: number;
+  provider_name: string;
+  display_priority: number;
+}
