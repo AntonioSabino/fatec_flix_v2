@@ -31,7 +31,7 @@ input:focus {
 	outline: none;
 }
 
-button {
+.search-button {
 	height: 40px;
 	padding: 8px 12px;
 	background: linear-gradient(to right, #00050d, #007bff);
@@ -41,6 +41,6 @@ button {
 	transition: background 0.3s ease-in-out;
 }
 
-button:hover {
+.search-button:hover {
 	background: linear-gradient(to right, #04000c, #bf00ff);
 }

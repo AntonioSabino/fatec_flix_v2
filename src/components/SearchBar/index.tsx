@@ -22,7 +22,12 @@ function SearchBar({ onSearch }: SearchBarProps) {
 				value={searchQuery}
 				onChange={(e) => setSearchQuery(e.target.value)}
 			/>
-			<button onClick={handleSearch}>Pesquisar</button>
+			<button
+				className='search-button'
+				onClick={handleSearch}
+			>
+				Pesquisar
+			</button>
 		</div>
 	)
 }

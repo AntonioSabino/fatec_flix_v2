@@ -36,3 +36,22 @@
 	height: auto;
 	margin-right: 10px;
 }
+
+.add-to-favorites,
+.remove-from-favorites {
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 8px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.add-to-favorites {
+	background-color: #2ecc71;
+}
+
+.remove-from-favorites {
+	background-color: #e74c3c;
+}

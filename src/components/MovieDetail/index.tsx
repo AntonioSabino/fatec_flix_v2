@@ -9,6 +9,7 @@ const MovieDetail = () => {
 
 	const [movieDetails, setMovieDetails] = useState<Movie>({} as Movie)
 	const [providers, setProviders] = useState<MovieLink>({} as MovieLink)
+	const [isInFavorites, setIsInFavorites] = useState(false)
 
 	useEffect(() => {
 		const fetchMovie = async () => {
@@ -21,7 +22,45 @@ const MovieDetail = () => {
 		fetchMovie().catch(console.error)
 	}, [id])
 
-	console.log(providers)
+	useEffect(() => {
+		const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
+		setIsInFavorites(favorites.some((fav: Movie) => fav.id === movieDetails.id))
+	}, [movieDetails.id])
+
+	const handleAddToFavorites = () => {
+		const user = JSON.parse(localStorage.getItem('user') || '{}')
+		if (user.isLoggedIn) {
+			const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
+
+			if (!isInFavorites) {
+				favorites.push(movieDetails)
+
+				localStorage.setItem('favorites', JSON.stringify(favorites))
+			} else {
+				console.log('O filme já está na lista de favoritos.')
+				handleRemoveFromFavorites()
+			}
+
+			// Atualiza o estado de isInFavorites
+			setIsInFavorites(!isInFavorites)
+		} else {
+			console.log('O usuário não está logado.')
+		}
+	}
+
+	const handleRemoveFromFavorites = () => {
+		const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
+		const updatedFavorites = favorites.filter(
+			(fav: Movie) => fav.id !== movieDetails.id
+		)
+
+		localStorage.setItem('favorites', JSON.stringify(updatedFavorites))
+
+		console.log('Filme removido dos favoritos.')
+
+		// Atualiza o estado de isInFavorites
+		setIsInFavorites(!isInFavorites)
+	}
 
 	if (movieDetails) {
 		return (
@@ -33,6 +72,21 @@ const MovieDetail = () => {
 				<div className='movie-detail-info'>
 					<h2>{movieDetails.title}</h2>
 					<p>{movieDetails.overview}</p>
+					{isInFavorites ? (
+						<button
+							onClick={handleRemoveFromFavorites}
+							className='remove-from-favorites'
+						>
+							Remover dos Favoritos
+						</button>
+					) : (
+						<button
+							onClick={handleAddToFavorites}
+							className='add-to-favorites'
+						>
+							Adicionar aos Favoritos
+						</button>
+					)}
 					<div className='providers-info'>
 						<h3>Stream</h3>
 						<ul>

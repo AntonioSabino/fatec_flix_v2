@@ -7,10 +7,10 @@ export default function Header() {
 			<nav>
 				<ul>
 					<li>
-						<a href='#'>Início</a>
+						<a href='/'>Início</a>
 					</li>
 					<li>
-						<a href='#'>Meu favoritos</a>
+						<a href='/favoritos'>Meu favoritos</a>
 					</li>
 				</ul>
 			</nav>
