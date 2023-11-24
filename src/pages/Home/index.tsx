@@ -1,6 +1,6 @@
 import './Home.css'
 
-import { apiUrls, fetchMovieData } from '../../utils/api'
+import { apiUrls, fetchMovieData, searchMovies } from '../../utils/api'
 import { useEffect, useState } from 'react'
 import MovieBanner from '../../components/MovieBanner'
 import MovieList from '../../components/MovieList'
@@ -12,6 +12,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Navigate } from 'react-router-dom'
+import SearchBar from '../../components/SearchBar'
 
 function Home() {
 	const isLogged = localStorage.getItem('user')
@@ -19,6 +20,13 @@ function Home() {
 	const [category, setCategory] = useState<string>('trendingMovies')
 	const [movies, setMovies] = useState<Movie[]>([])
 	const [bannerMovies, setBannerMovies] = useState<Movie[]>([])
+
+	const handleSearch = async (query: string) => {
+		const searchResults = await searchMovies(query)
+		setMovies(searchResults)
+		setBannerMovies(searchResults.slice(0, 5))
+		setCategory('')
+	}
 
 	useEffect(() => {
 		const fetchMovies = async () => {
@@ -39,10 +47,10 @@ function Home() {
 		)
 	}
 
-	console.log(movies)
-
 	return (
 		<>
+			<SearchBar onSearch={handleSearch} />
+
 			<Swiper
 				slidesPerView={7}
 				spaceBetween={30}

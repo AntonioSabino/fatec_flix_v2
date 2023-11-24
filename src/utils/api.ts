@@ -104,4 +104,22 @@ async function fetchMovieWatchProviders(id: number): Promise<MovieLink> {
 	}
 }
 
-export { fetchMovieData, fetchMovieDetails, fetchMovieWatchProviders, apiUrls }
+async function searchMovies(query: string): Promise<Movie[]> {
+	try {
+		const response = await fetch(
+			`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pt-BR&region=BR&query=${encodeURIComponent(query)}`
+		);
+
+		if (!response.ok) {
+			throw new Error('Erro ao buscar dados da API');
+		}
+
+		const data = await response.json();
+		return data.results;
+	} catch (error) {
+		console.error(error);
+		throw error;
+	}
+}
+
+export { fetchMovieData, fetchMovieDetails, fetchMovieWatchProviders, apiUrls, searchMovies }
