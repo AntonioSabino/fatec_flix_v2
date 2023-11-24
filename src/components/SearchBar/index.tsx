@@ -17,6 +17,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
 	return (
 		<div className='search-container'>
 			<input
+				className='search-input'
 				type='text'
 				placeholder='Pesquisar filmes...'
 				value={searchQuery}
