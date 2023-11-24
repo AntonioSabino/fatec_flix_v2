@@ -1,4 +1,5 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
 	return (
@@ -11,10 +12,10 @@ export default function Header() {
 			<nav>
 				<ul>
 					<li>
-						<a href='/'>Início</a>
+						<Link to='/'>Início</Link>
 					</li>
 					<li>
-						<a href='/favorites'>Meu favoritos</a>
+						<Link to='/favorites'>Meu favoritos</Link>
 					</li>
 				</ul>
 			</nav>
