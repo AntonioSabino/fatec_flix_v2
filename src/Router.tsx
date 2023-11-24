@@ -4,6 +4,7 @@ import { SignUp } from './components/Signup'
 import Home from './pages/Home'
 import DefaultLayout from './layouts/DefaultLayout'
 import MovieDetail from './components/MovieDetail'
+import FavoriteMovies from './pages/FavoriteMovies'
 
 const AppRouter = () => {
 	return (
@@ -24,6 +25,10 @@ const AppRouter = () => {
 					<Route
 						path='/'
 						element={<Home />}
+					/>
+					<Route
+						path='/favorites'
+						element={<FavoriteMovies />}
 					/>
 					<Route
 						path='/movie/:id'
