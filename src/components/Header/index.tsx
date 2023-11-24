@@ -3,7 +3,11 @@ import './Header.css'
 export default function Header() {
 	return (
 		<header className='header'>
-			<h1 className='logo'>Logo Aplicação</h1>
+			<img
+				src='img/logo.png'
+				alt='logo'
+				className='logo'
+			/>
 			<nav>
 				<ul>
 					<li>
