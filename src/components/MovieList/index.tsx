@@ -18,7 +18,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
 						/>
 						<div className='movie-info'>
 							<h3 className='movie-title'>{movie.title}</h3>
-							<span className='movie-vote'>{movie.vote_average}</span>
+							{/* <span className='movie-vote'>{movie.vote_average}</span> */}
 						</div>
 					</Link>
 				))}
