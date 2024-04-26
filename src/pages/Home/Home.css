@@ -1,36 +1,72 @@
 .swiper {
-	width: 100%;
+  width: 100%;
 }
 
 .swiper-categories {
-	height: 100px;
+  height: 100px;
 }
 
 .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slide-category {
-	display: flex !important;
+  display: flex !important;
 }
 
 .slide-category:hover {
-	cursor: grab;
-	transform: scale(1.5);
-	transition: all 0.3s ease-in-out;
+  cursor: grab;
+  transform: scale(1.5);
+  transition: all 0.3s ease-in-out;
 }
 
 .slide-category:active {
-	cursor: grabbing;
+  cursor: grabbing;
+}
+
+.movie-cards {
+  margin: 20px;
+  transition: 0.2s;
+}
+
+.movie-cards img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 6px -6px black;
+  
+}
+
+.swiper-movies-container {
+  box-shadow: inset 20px 0  #12191d;
+}
+
+.swiper-movies {
+  /* background-color: aqua; */
+  margin-top: 10px;
+  
+}
+
+
+.movie-cards:hover {
+
+    transform: scale(1.02);
+  }
+
+.movie-cards-title {
+  font-size: 16px;
+  margin: 5px 0;
 }

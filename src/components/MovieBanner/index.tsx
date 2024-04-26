@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Link } from 'react-router-dom'
 import { Movie } from '../../interfaces/movie.interface'
 import './MovieBanner.css'
 import { Autoplay, Pagination } from 'swiper/modules'
@@ -23,6 +24,7 @@ export default function MovieBanner({ movies }: { movies: Movie[] }) {
         }}
 			>
 				{movies.map((movie: Movie) => (
+          
 					<SwiperSlide
 						className='movie-banner'
 						style={{
@@ -30,7 +32,13 @@ export default function MovieBanner({ movies }: { movies: Movie[] }) {
 						}}
 						key={movie.title}
 					>
+            <Link
+          to={`/movie/${movie.id}`}
+          className='movie'
+          key={movie.id}
+        >
 						<h2 className='movie-banner-title'>{movie.title}</h2>
+          </Link>
 					</SwiperSlide>
 				))}
 			</Swiper>
