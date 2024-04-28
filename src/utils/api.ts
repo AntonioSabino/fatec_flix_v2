@@ -18,6 +18,10 @@ const apiUrls: ApiUrls = {
 		title: 'Melhores',
 		url: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
+  nowPlayingMovies: {
+		title: 'Populares',
+		url: `/movie/now_playing?api_key=${API_KEY}&language=pt-BR&region=BR`,
+	},
 	actionMovies: {
 		title: 'Ação',
 		url: `/discover/movie?api_key=${API_KEY}&with_genres=28&language=pt-BR&region=BR`,

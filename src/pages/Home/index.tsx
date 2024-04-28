@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigate } from "react-router-dom";
 import SearchBar from "../../components/SearchBar";
+import MovieRowList from "../../components/MovieRowList";
 
 function Home() {
   const isLogged = localStorage.getItem("user");
@@ -43,10 +44,9 @@ function Home() {
   }
 
   return (
-    <>
+    <div className="home-container">
       <SearchBar onSearch={handleSearch} />
 
-      
       <Swiper
         slidesPerView={7}
         spaceBetween={30}
@@ -67,28 +67,11 @@ function Home() {
         ))}
       </Swiper>
       <MovieBanner movies={bannerMovies} />
-  
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={20}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        loop={true}
-        className="swiper-movies"
-      >
-        {movies.map((movies: Movie) => (
-          <SwiperSlide className="movie-cards">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}
-              alt=""
-            />
-            <h3 className="movie-cards-title">{movies.title}</h3>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-   
+
+      <MovieRowList title="Em alta" movies={movies} />
+      <MovieRowList title="Recentes" movies={movies} />
       <MovieList movies={movies} />
-    </>
+    </div>
   );
 }
 

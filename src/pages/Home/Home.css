@@ -1,3 +1,9 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .swiper {
   width: 100%;
 }
@@ -13,7 +19,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .swiper-slide img {
   display: block;
@@ -36,37 +41,8 @@
   cursor: grabbing;
 }
 
-.movie-cards {
-  margin: 20px;
-  transition: 0.2s;
-}
-
-.movie-cards img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 6px -6px black;
-  
-}
-
-.swiper-movies-container {
-  box-shadow: inset 20px 0  #12191d;
-}
-
-.swiper-movies {
-  /* background-color: aqua; */
-  margin-top: 10px;
-  
-}
 
 
-.movie-cards:hover {
 
-    transform: scale(1.02);
-  }
 
-.movie-cards-title {
-  font-size: 16px;
-  margin: 5px 0;
-}
+
