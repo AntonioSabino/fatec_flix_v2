@@ -6,6 +6,7 @@ export interface Movie {
   poster_path: string
   overview: string
   release_date: string
+  genre_ids: number[]
 }
 
 export interface MovieLink {
@@ -20,4 +21,9 @@ interface MovieProvider {
   provider_id: number;
   provider_name: string;
   display_priority: number;
+}
+
+export interface Genre {
+  id: number;
+  name: string;
 }

@@ -1,27 +1,67 @@
 .movie-banner-swiper {
-	max-width: 1200px;
+	max-width: 80%;
   max-height: 900px;
 }
 
 .movie-banner {
 	background-size: cover;
+  width: 100%;
   background-repeat: no-repeat;
 	background-position-x: center;
 	background-position-y: top;
 	cursor: pointer;
-  box-shadow: inset 0px 0px 100px 20px #0F0E0E;
+  box-shadow: inset 0px 0px 300px 100px #0F0E0E;
+}
+
+.movie-banner-details {
+  padding: 20px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.movie-banner-small-details {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 500px;
+  justify-content: space-around;
+  color: rgb(0, 153, 255);
+  font-weight: lighter;
+}
+
+.movie-banner-small-details img {
+  width: 16px !important;
+}
+
+h4:first-child {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.movie-banner-small-details-rating {
+  gap: 6px;
+  display: flex;
 }
 
 .movie-banner-title {
-	font-size: 28px;
+	font-size: 58px;
 	color: #fff;
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+	text-shadow: 1px 1px 2px #000000;
 	max-width: 1200px;
 	min-height: 500px;
-	padding: 10px 20px;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-  transform: translate(0, -20px);
+  text-align: start;
+}
+
+.movie-banner-overview {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 400;
 }

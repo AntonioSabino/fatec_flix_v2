@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Movie } from "../../interfaces/movie.interface";
 import { Link } from 'react-router-dom'
 import './MovieRowList.css'
@@ -19,8 +19,7 @@ const MovieRowList:FC<MovieRowListProps> = (props) => {
       <Swiper
         slidesPerView={7}
         spaceBetween={20}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
         loop={true}
         className="swiper-movies"
       >
