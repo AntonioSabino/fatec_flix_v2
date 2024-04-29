@@ -14,12 +14,12 @@ const apiUrls: ApiUrls = {
 		title: 'Populares',
 		url: `/trending/movie/week?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
-	toRatedMovies: {
+	topRatedMovies: {
 		title: 'Melhores',
 		url: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
   nowPlayingMovies: {
-		title: 'Populares',
+		title: 'Recentes',
 		url: `/movie/now_playing?api_key=${API_KEY}&language=pt-BR&region=BR`,
 	},
 	actionMovies: {
@@ -75,6 +75,8 @@ async function fetchMovieData(endpoint: string): Promise<Movie[]> {
 		throw error
 	}
 }
+
+// https://api.themoviedb.org/3/discover/movie?api_key=810ba574a37135c7008528d7643e1dc8&with_genres=10770&language=pt-BR&region=BR
 
 async function fetchMovieDetails(id: number): Promise<Movie> {
 	try {

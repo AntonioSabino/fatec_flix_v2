@@ -10,6 +10,7 @@
 }
 
 .movie {
+  margin-top: 10px;
 	width: calc(25% - 20px);
 	text-align: center;
   text-decoration: none;

@@ -27,7 +27,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
 				className='search-button'
 				onClick={handleSearch}
 			>
-				Pesquisar
+				<img src="https://static-00.iconduck.com/assets.00/search-icon-512x512-dxj09ddf.png" className='search-icon' alt="" />
 			</button>
 		</div>
 	)

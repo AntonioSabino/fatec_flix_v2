@@ -13,7 +13,9 @@ interface MovieRowListProps {
 const MovieRowList:FC<MovieRowListProps> = (props) => {
   return (
     <div className="movie-row-container">
-      <h1>{props.title}</h1>
+      
+      <h2 className="movie-row-category">{props.title}</h2>
+      <hr className="solid"></hr>
       <Swiper
         slidesPerView={7}
         spaceBetween={20}

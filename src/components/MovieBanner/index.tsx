@@ -15,8 +15,8 @@ export default function MovieBanner({ movies }: { movies: Movie[] }) {
 				slidesPerView={1}
 				spaceBetween={30}
 				loop={true}
-				pagination={true}
-        // navigation
+        className='movie-banner-swiper'
+				pagination={{clickable:true}}
 				modules={[Pagination, Autoplay]}
         autoplay={{
           delay: 2500,

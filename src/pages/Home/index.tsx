@@ -8,9 +8,9 @@ import { Movie } from "../../interfaces/movie.interface";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 import { Navigate } from "react-router-dom";
 import SearchBar from "../../components/SearchBar";
 import MovieRowList from "../../components/MovieRowList";
@@ -20,6 +20,8 @@ function Home() {
 
   const [category, setCategory] = useState<string>("trendingMovies");
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
+  const [topRatedMovies, setTopRatedMovies] = useState<Movie[]>([]);
   const [bannerMovies, setBannerMovies] = useState<Movie[]>([]);
 
   const handleSearch = async (query: string) => {
@@ -33,6 +35,13 @@ function Home() {
     const fetchMovies = async () => {
       const moviesData = await fetchMovieData(category);
       setMovies(moviesData);
+
+      const nowPlayingMoviesData = await fetchMovieData("nowPlayingMovies");
+      setNowPlayingMovies(nowPlayingMoviesData.slice(0, 10));
+
+      const topRatedMoviesData = await fetchMovieData("topRatedMovies");
+      setTopRatedMovies(topRatedMoviesData.slice(0, 10));
+
       setBannerMovies(moviesData.slice(0, 5));
     };
 
@@ -46,11 +55,9 @@ function Home() {
   return (
     <div className="home-container">
       <SearchBar onSearch={handleSearch} />
-
+      <MovieBanner movies={bannerMovies} />
       <Swiper
-        slidesPerView={7}
-        spaceBetween={30}
-        centeredSlides={true}
+        slidesPerView={8}
         loop={true}
         navigation={true}
         modules={[Pagination, Navigation]}
@@ -66,10 +73,9 @@ function Home() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <MovieBanner movies={bannerMovies} />
 
-      <MovieRowList title="Em alta" movies={movies} />
-      <MovieRowList title="Recentes" movies={movies} />
+      <MovieRowList title="Em alta" movies={topRatedMovies} />
+      <MovieRowList title="Recentes" movies={nowPlayingMovies} />
       <MovieList movies={movies} />
     </div>
   );
