@@ -1,17 +1,17 @@
 :root {
-	--font-primary: #fff;
-	--font-secondary: #aaaaaa;
-	--bg-primary: #1B262C;
+  --font-primary: #fff;
+  --font-secondary: #aaaaaa;
+  --bg-primary: #0F0E0E;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background: var(--bg-primary);
-	color: #fff;
-	font-family: 'Poppins', sans-serif;
+  background:var(--bg-primary);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
 }

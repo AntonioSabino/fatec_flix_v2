@@ -5,6 +5,8 @@ import './MovieList.css'
 export default function MovieList({ movies }: { movies: Movie[] }) {
 	return (
 		<div className='movie-list-container'>
+      <h2 className="movie-row-category">Outros</h2>
+      <hr className="solid"></hr>
 			<div className='movie-list'>
 				{movies.map((movie: Movie) => (
 					<Link

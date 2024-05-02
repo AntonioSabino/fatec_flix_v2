@@ -1,17 +1,3 @@
 .favorite-title {
 	text-align: center;
 }
-
-.slide-category {
-	display: flex !important;
-}
-
-.slide-category:hover {
-	cursor: grab;
-	transform: scale(1.5);
-	transition: all 0.3s ease-in-out;
-}
-
-.slide-category:active {
-	cursor: grabbing;
-}

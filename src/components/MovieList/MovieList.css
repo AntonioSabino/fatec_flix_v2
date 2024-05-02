@@ -3,7 +3,6 @@
 	margin: 0 auto;
 }
 .movie-list {
-	margin-top: 32px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -11,10 +10,15 @@
 }
 
 .movie {
+  margin-top: 10px;
 	width: calc(25% - 20px);
 	text-align: center;
   text-decoration: none;
   color: white;
+  transition: 0.3s;
+}
+.movie:hover {
+  transform: scale(1.02);
 }
 
 .movie img {
@@ -22,6 +26,7 @@
 	object-fit: cover;
 	border-radius: 8px;
 	overflow: hidden;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .movie-title {
