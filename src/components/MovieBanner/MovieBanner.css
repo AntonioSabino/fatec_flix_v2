@@ -1,5 +1,5 @@
 .movie-banner-swiper {
-	max-width: 80%;
+	max-width: 1200px;
   max-height: 900px;
 }
 
@@ -10,7 +10,8 @@
 	background-position-x: center;
 	background-position-y: top;
 	cursor: pointer;
-  box-shadow: inset 0px 0px 300px 100px #0F0E0E;
+  box-shadow: inset -100px 0px 300px 10px #0F0E0E, inset 100px 0px 300px 10px #0F0E0E;
+  border-radius: 20px;
 }
 
 .movie-banner-details {

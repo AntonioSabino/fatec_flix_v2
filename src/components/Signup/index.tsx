@@ -42,20 +42,20 @@ export function SignUp() {
 		<div className='container'>
 			<h2>Cadastrar</h2>
 			<form>
-				<label className='form-label'>
+				<label className='form-label-signup'>
 					Usuário:
 					<input
-						className='form-input'
+						className='form-input-signup'
 						type='text'
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
 					/>
 				</label>
 				<br />
-				<label className='form-label'>
+				<label className='form-label-signup'>
 					Senha:
 					<input
-						className='form-input'
+						className='form-input-signup'
 						type='password'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
@@ -63,7 +63,7 @@ export function SignUp() {
 				</label>
 				<br />
 				<button
-					className='form-button'
+					className='form-button-signup'
 					type='button'
 					onClick={handleSignUp}
 				>
