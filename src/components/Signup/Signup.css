@@ -7,18 +7,18 @@
 	margin-top: 50px;
 }
 
-.form-label {
+.form-label-signup {
 	display: block;
 	margin-bottom: 8px;
 }
 
-.form-input {
+.form-input-signup {
 	width: 100%;
 	padding: 8px;
 	margin-bottom: 16px;
 }
 
-.form-button {
+.form-button-signup {
 	background-color: #2ecc71;
 	color: #fff;
 	padding: 10px;
