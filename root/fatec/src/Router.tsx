@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import DefaultLayout from './layouts/DefaultLayout'
 import MovieDetail from './components/MovieDetail'
 import FavoriteMovies from './pages/FavoriteMovies'
+import Admin from './pages/admin'
 
 const AppRouter = () => {
 	return (
@@ -17,6 +18,10 @@ const AppRouter = () => {
 				<Route
 					path='/signup'
 					element={<SignUp />}
+				/>
+				<Route
+					path='/admin'
+					element={<Admin />}
 				/>
 				<Route
 					path='/'

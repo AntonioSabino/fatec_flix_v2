@@ -38,7 +38,7 @@ export function SignIn() {
 
       localStorage.setItem("user", JSON.stringify(user));
 
-      navigate("/");
+      user.username === 'admin' ? navigate("/admin") : navigate("/");
     } else {
       alert("Login inválido!");
     }
