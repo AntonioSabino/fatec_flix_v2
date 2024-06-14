@@ -1,0 +1,20 @@
+[Mon Jun 03 20:07:53.912689 2024] [mpm_winnt:notice] [pid 2000:tid 828] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Mon Jun 03 20:07:53.912689 2024] [mpm_winnt:notice] [pid 2000:tid 828] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Mon Jun 03 20:07:53.912689 2024] [core:notice] [pid 2000:tid 828] AH00094: Command line: 'C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2/apache2/bin/httpd_usbwv8.exe -d C:/Users/lab5.LABTEC/Downloads/p2 - Update SignUp/p2/apache2'
+[Mon Jun 03 20:07:53.912689 2024] [mpm_winnt:notice] [pid 2000:tid 828] AH00418: Parent: Created child process 17140
+[Mon Jun 03 20:07:54.372782 2024] [mpm_winnt:notice] [pid 17140:tid 816] AH00354: Child: Starting 64 worker threads.
+[Mon Jun 03 20:15:33.600530 2024] [:error] [pid 17140:tid 1296] [client ::1:56872] PHP Notice:  Undefined index: user_name in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 14, referer: http://localhost:5173/
+[Mon Jun 03 20:15:33.601621 2024] [:error] [pid 17140:tid 1296] [client ::1:56872] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/
+[Mon Jun 03 20:17:21.976393 2024] [:error] [pid 17140:tid 1304] [client ::1:56989] PHP Notice:  Undefined index: user_name in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 14, referer: http://localhost:5173/
+[Mon Jun 03 20:19:11.332518 2024] [core:warn] [pid 12660:tid 544] AH00098: pid file C:/Users/lab5.LABTEC/Downloads/p2 - Update SignUp/p2/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Jun 03 20:19:11.348155 2024] [mpm_winnt:notice] [pid 12660:tid 544] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Mon Jun 03 20:19:11.348155 2024] [mpm_winnt:notice] [pid 12660:tid 544] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Mon Jun 03 20:19:11.348155 2024] [core:notice] [pid 12660:tid 544] AH00094: Command line: 'C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2/apache2/bin/httpd_usbwv8.exe -d C:/Users/lab5.LABTEC/Downloads/p2 - Update SignUp/p2/apache2'
+[Mon Jun 03 20:19:11.348155 2024] [mpm_winnt:notice] [pid 12660:tid 544] AH00418: Parent: Created child process 15752
+[Mon Jun 03 20:19:11.703504 2024] [mpm_winnt:notice] [pid 15752:tid 820] AH00354: Child: Starting 64 worker threads.
+[Mon Jun 03 20:19:35.828703 2024] [:error] [pid 15752:tid 1332] [client ::1:57129] PHP Notice:  Undefined index: user_name in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 14, referer: http://localhost:5173/
+[Mon Jun 03 20:21:20.841197 2024] [:error] [pid 15752:tid 1328] [client ::1:57236] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/
+[Mon Jun 03 20:21:20.841197 2024] [:error] [pid 15752:tid 1336] [client ::1:57234] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/
+[Mon Jun 03 20:23:35.140450 2024] [:error] [pid 15752:tid 1324] [client ::1:57313] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/
+[Mon Jun 03 20:43:51.572220 2024] [:error] [pid 15752:tid 1324] [client ::1:58515] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/
+[Mon Jun 03 20:52:35.376453 2024] [:error] [pid 15752:tid 1336] [client ::1:58908] PHP Notice:  Undefined variable: admin in C:\\Users\\lab5.LABTEC\\Downloads\\p2 - Update SignUp\\p2\\root\\fatec\\api\\cadastrar.php on line 29, referer: http://localhost:5173/

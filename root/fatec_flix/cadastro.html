@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+</head>
+<body>
+  <form method="post" name="cadastrar">
+    <label for="user_name">USUARIO</label>
+    <input type="text" name="user_name" id="user_name" required>
+
+    <label for="email">EMAIL</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="password">SENHA</label>
+    <input type="password" name="password" id="password" required>
+
+    <button onclick="document.cadastrar.action='cadastrar.php'" type="submit">Cadastrar</button>
+  </form>
+</body>
+</html>
+

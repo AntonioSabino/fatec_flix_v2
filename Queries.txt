@@ -1,0 +1,52 @@
+CREATE DATABASE IF NOT EXISTS db_fatecflix;
+
+USE db_fatecflix;
+
+CREATE TABLE IF NOT EXISTS Users (
+    ID CHAR(36) PRIMARY KEY,
+    UserName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    Admin BOOLEAN NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY (Email),
+    UNIQUE KEY (UserName)
+);
+
+CREATE TABLE IF NOT EXISTS FavoriteMovies (
+    ID CHAR(36) PRIMARY KEY,
+    UserID CHAR(36),
+    MovieID INT NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(ID)
+);
+
+CREATE TABLE IF NOT EXISTS Ratings (
+    ID CHAR(36) PRIMARY KEY,
+    UserID CHAR(36),
+    MovieID INT NOT NULL,
+    Rating DECIMAL(2, 1),
+    Comment TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserID) REFERENCES Users(ID)
+);
+
+
+INSERT INTO Users (ID, UserName, Email, Password) 
+VALUES 
+(UUID(), 'usuario1', 'usuario1@example.com', 'senha123'),
+(UUID(), 'usuario2', 'usuario2@example.com', 'senha456'),
+(UUID(), 'usuario3', 'usuario3@example.com', 'senha789');
+
+INSERT INTO FavoriteMovies (ID, UserID, MovieID)
+VALUES 
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 1),
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 2),
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 3);
+
+INSERT INTO Ratings (ID, UserID, MovieID, Rating, Comment)
+VALUES 
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 1, 4.5, 'Ótimo filme!'),
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 2, 3.2, 'Mais ou menos'),
+(UUID(), UUID_TO_BIN('ID_DO_USUARIO_AQUI', TRUE), 3, 5.0, 'Excelente!');
