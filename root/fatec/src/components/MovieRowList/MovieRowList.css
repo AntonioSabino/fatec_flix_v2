@@ -1,0 +1,58 @@
+.movie-row-container {
+  width: 1200px;
+  margin-top: 20px;
+  background-color: #272727;
+  border-left: outset 2px #fff;
+  border-bottom: outset 2px #fff;
+}
+
+.movie-row-category {
+  padding: 8px 16px;
+  
+  /* border-top: solid 2px #fff; */
+  margin: 12px;
+}
+
+.movie-cards {
+
+  transition: 0.2s;
+}
+
+.movie-cards img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 6px -6px black;
+  
+}
+
+.movie-cards-title {
+  font-size: 16px;
+  margin: 10px;
+  margin-bottom: 22PX;
+  
+}
+
+.movie-cards:hover {
+  transform: scale(1.02);
+}
+
+.swiper-movies {
+  height: 100%;
+  max-width: 1200px;
+  max-height: 900px;
+  margin: 20px;
+}	
+
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  z-index: 50;
+  height: 10px;
+  width: calc(100% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+  background-color: black;
+}
+
+.swiper-scrollbar-drag  {
+  background-color: white !important;
+}
