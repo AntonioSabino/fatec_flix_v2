@@ -3,11 +3,18 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Signin.css";
 
-export function SignIn() {
+export function SignIn({ setProgress }: { setProgress: React.Dispatch<React.SetStateAction<number>> }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setProgress(80);
+    setTimeout(() => {
+      setProgress(100);
+    }, 1000);
+  }, [])
 
   const handleSignIn = async () => {
     const myHeaders = new Headers();
@@ -21,6 +28,8 @@ export function SignIn() {
             password,
         }),
     };
+
+    
 
     try {
         const response = await fetch("http://localhost:8080/fatec/api/login.php", myInit);
@@ -37,17 +46,20 @@ export function SignIn() {
             isLoggedIn: true,
         };
 
-        // Armazena o usuário no localStorage
+       
         localStorage.setItem("user", JSON.stringify(user));
 
-        // Armazena os favoritos como um array de objetos JSON no localStorage
+   
         if (Array.isArray(data.favorites)) {
             localStorage.setItem("favorites", JSON.stringify(data.favorites));
         } else {
             localStorage.setItem("favorites", "[]"); // Caso não existam favoritos, armazena um array vazio
         }
-
-        window.location.reload(); // Recarrega a página para refletir o estado de login
+        setTimeout(() => {
+          user.username === 'admin' ? navigate('/admin') : navigate('/');
+        }, 2000)
+        
+        window.location.reload(); 
     } catch (error) {
         alert("Erro ao fazer login");
     }

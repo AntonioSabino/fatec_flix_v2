@@ -11,7 +11,7 @@ import { Navigate } from "react-router-dom";
 import SearchBar from "../../components/SearchBar";
 import MovieRowList from "../../components/MovieRowList";
 
-function Home() {
+function Home({ setProgress }: { setProgress: React.Dispatch<React.SetStateAction<number>> }) {
   const isLogged = localStorage.getItem("user");
 
   const [category, setCategory] = useState<string>("trendingMovies");
@@ -28,6 +28,13 @@ function Home() {
     setMovieListTitle(query);
     setCategory("");
   };
+
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 2000);
+  }, []);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -53,17 +60,13 @@ function Home() {
   return (
     <div className="home-container">
       <SearchBar onSearch={handleSearch} />
-
-      {!movies ? (
-        <h1>Carregando...</h1>
-      ) : (
         <>
           {category === "trendingMovies" ? (
             <MovieBanner movies={bannerMovies} />
           ) : (
             <div></div>
           )}
-
+          
           {category === "trendingMovies" ? (
             <Swiper
               slidesPerView={8}
@@ -104,7 +107,6 @@ function Home() {
             }
           />
         </>
-      )}
     </div>
   );
 }

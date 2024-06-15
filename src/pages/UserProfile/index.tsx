@@ -4,10 +4,20 @@ import FavoriteMovies from "../FavoriteMovies";
 import "./UserProfile.css";
 import UserSocials from "../../components/UserSocials";
 
-const UserProfile = () => {
+const UserProfile = ({ setProgress }: { setProgress: React.Dispatch<React.SetStateAction<number>> }) => {
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [isButtonVisible, setIsButtonVisible] = useState(false);
+  
+  useEffect(() => {
+    setProgress(20);
+    setTimeout(() => {
+      setProgress(80);
+    }, 500);
+    setTimeout(() => {
+      setProgress(100);
+    }, 1000);
+  }, [])
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user") ?? "{}");
@@ -16,6 +26,7 @@ const UserProfile = () => {
       setUserEmail(user.user_email);
     }
   }, []);
+
 
   const handleFocus = () => {
     setIsButtonVisible(true);
@@ -34,7 +45,7 @@ const UserProfile = () => {
           <div className="user-info-container">
             <img
               className="user-pfp"
-              src="https://cdn-icons-png.flaticon.com/128/149/149071.png"
+              src="https://cdn-icons-png.flaticon.com/512/1999/1999625.png"
               alt=""
             />
             <h1>

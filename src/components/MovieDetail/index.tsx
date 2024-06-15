@@ -4,7 +4,7 @@ import { Movie, MovieLink } from "../../interfaces/movie.interface";
 import { fetchMovieDetails, fetchMovieWatchProviders } from "../../utils/api";
 import "./MovieDetail.css";
 
-const MovieDetail = () => {
+const MovieDetail = ({ setProgress }: { setProgress: React.Dispatch<React.SetStateAction<number>> }) => {
   const { id } = useParams();
 
   const [movieDetails, setMovieDetails] = useState<Movie>({} as Movie);
@@ -63,6 +63,13 @@ const MovieDetail = () => {
       link: "https://www.telecine.com.br/",
     },
   ];
+  
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 1000);
+  }, [])
 
   useEffect(() => {
     const fetchMovie = async () => {
