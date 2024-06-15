@@ -41,8 +41,38 @@ function Admin() {
 
 	const handleSave = () => {
 		console.log('Save user:', editedUser)
-		setEditingUser(null)
+
+		const myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/json')
+
+		const myInit = {
+			method: 'PUT',
+			headers: myHeaders,
+			body: JSON.stringify(editedUser),
+		}
+
+		fetch('http://localhost:8080/fatec/api/editar_usuario.php', myInit)
+			.then((response) => response.json())
+			.then((data) => {
+				if (data.status === 200) {
+					const updatedUsers = users.map((user) => {
+						if (user.user_name === editedUser?.user_name) {
+							return editedUser
+						}
+						return user
+					})
+					setUsers(updatedUsers)
+				} else {
+					alert('Erro ao editar usuário...')
+				}
+			})
+			.catch((error) => {
+				console.error('Erro ao editar usuário:', error)
+				alert('Erro ao editar usuário...')
+			})
+
 		setEditedUser(null)
+		setEditingUser(null)
 	}
 
 	const handleDelete = (userName: string) => {
