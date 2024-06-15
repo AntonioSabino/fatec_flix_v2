@@ -1,0 +1,13 @@
+.item {
+  list-style: none;
+  
+}
+
+.item a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}

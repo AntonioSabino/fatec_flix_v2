@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <form method="post" name="login">
+    <label for="user_email">USUARIO OU EMAIL</label>
+    <input type="text" name="user_email" id="user_email" required>
+
+    <label for="password">SENHA</label>
+    <input type="password" name="password" id="password" required>
+
+    <button onclick="document.login.action='login.php'" type="submit">login</button>
+  </form>
+</body>
+</html>

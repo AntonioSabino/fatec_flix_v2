@@ -1,0 +1,393 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/nv6F6tz7r61DUhE7zgHwLJFcTYp.jpg",
+    "belongs_to_collection": null,
+    "budget": 8800000,
+    "genres": [
+      { "id": 10749, "name": "Romance" },
+      { "id": 35, "name": "Comédia" },
+      { "id": 80, "name": "Crime" }
+    ],
+    "homepage": "",
+    "id": 974635,
+    "imdb_id": "tt20215968",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Hit Man",
+    "overview": "Fingindo ser um assassino de aluguel para prender seus contratantes, o policial Gary Johnson quebra seus protocolos profissionais, assim se colocando em risco, ao salvar uma mulher de seu namorado abusivo.",
+    "popularity": 1063.018,
+    "poster_path": "/q3aYbKPczQrae0N142XHYXbWbT5.jpg",
+    "production_companies": [
+      {
+        "id": 37361,
+        "logo_path": "/xpbUNXnrMeEK1ynbqVnHp8ZOVKW.png",
+        "name": "Aggregate Films",
+        "origin_country": "US"
+      },
+      {
+        "id": 175171,
+        "logo_path": null,
+        "name": "BarnStorm Productions",
+        "origin_country": "US"
+      },
+      {
+        "id": 11510,
+        "logo_path": "/gg3gP2wHNNfOfLKdXGjYC9qJ9ok.png",
+        "name": "Detour Filmproduction",
+        "origin_country": "US"
+      },
+      {
+        "id": 110799,
+        "logo_path": "/eHjtiQJjrGQTooEsBmPSYoUnNB.png",
+        "name": "AGC Studios",
+        "origin_country": "US"
+      },
+      {
+        "id": 88582,
+        "logo_path": "/zf2Akd6JvRZlnd1OacHYaN5dj0k.png",
+        "name": "Cinetic Media",
+        "origin_country": "US"
+      },
+      {
+        "id": 133093,
+        "logo_path": null,
+        "name": "Monarch Media",
+        "origin_country": "US"
+      },
+      {
+        "id": 33603,
+        "logo_path": "/K1SdQd49Kx3QRx0djfHbzeotCz.png",
+        "name": "Shivhans Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2024-05-16",
+    "revenue": 1139025,
+    "runtime": 116,
+    "spoken_languages": [
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Assassino por Acaso",
+    "video": false,
+    "vote_average": 6.961,
+    "vote_count": 246
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/oavbmL3iddJUmC8nQjL6bLHwAP4.jpg",
+    "belongs_to_collection": null,
+    "budget": 8000000,
+    "genres": [
+      { "id": 27, "name": "Terror" },
+      { "id": 53, "name": "Thriller" }
+    ],
+    "homepage": "",
+    "id": 719221,
+    "imdb_id": "tt14088510",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Tarot",
+    "overview": "Quando um grupo de amigos irresponsavelmente viola a regra sagrada da leitura de tarô, a de nunca usar o deque de outra pessoa, eles libertam um mal inominável que estava preso nas cartas. Um por um, eles encaram seu destino e acabam em uma corrida contra a morte para escapar do futuro previsto para eles nas cartas.",
+    "popularity": 1107.373,
+    "poster_path": "/fGamTFPbJAAUnC2fbJbApTgi9EE.jpg",
+    "production_companies": [
+      {
+        "id": 3287,
+        "logo_path": "/bz6GbCQQXGNE56LTW9dwgksW0Iw.png",
+        "name": "Screen Gems",
+        "origin_country": "US"
+      },
+      {
+        "id": 10067,
+        "logo_path": "/p1kZoVNfkVvk7xyJZEposRxcfh8.png",
+        "name": "Alloy Entertainment",
+        "origin_country": "US"
+      },
+      {
+        "id": 95434,
+        "logo_path": "/iKqEhbzYfb6YHwRlhqcvX1NIZbt.png",
+        "name": "Ground Control Entertainment",
+        "origin_country": "US"
+      },
+      {
+        "id": 154063,
+        "logo_path": "/r4anaxYa8OL5KaUbU35VkrIe88L.png",
+        "name": "Capstone Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2024-05-01",
+    "revenue": 45313000,
+    "runtime": 92,
+    "spoken_languages": [
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "O Tarô da Morte",
+    "video": false,
+    "vote_average": 6.473,
+    "vote_count": 464
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/veIyxxi5Gs8gvztLEW1Ysb8rrzs.jpg",
+    "belongs_to_collection": {
+      "id": 1280074,
+      "name": "Kong: Coleção",
+      "poster_path": "/lhyEUeOihbKf7ll8RCIE5CHTie3.jpg",
+      "backdrop_path": "/qHY4ZMIDSmElhiykjhh40Q5qMJl.jpg"
+    },
+    "budget": 150000000,
+    "genres": [
+      { "id": 878, "name": "Ficção científica" },
+      { "id": 28, "name": "Ação" },
+      { "id": 12, "name": "Aventura" }
+    ],
+    "homepage": "",
+    "id": 823464,
+    "imdb_id": "tt14539740",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Godzilla x Kong: The New Empire",
+    "overview": "O poderoso Kong e o temível Godzilla se unem contra uma colossal ameaça mortal escondida no mundo dos humanos, que ameaça a existência de sua espécie e da nossa. Mergulhando profundamente nos mistérios da Ilha da Caveira e nas origens da Terra Oca, o filme irá explorar a antiga batalha de Titãs que ajudou a forjar esses seres extraordinários e os ligou à humanidade para sempre.",
+    "popularity": 1588.863,
+    "poster_path": "/kO6K9zEsKhNyqcrdGTSqAI6jrie.jpg",
+    "production_companies": [
+      {
+        "id": 923,
+        "logo_path": "/8M99Dkt23MjQMTTWukq4m5XsEuo.png",
+        "name": "Legendary Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2024-03-27",
+    "revenue": 567156493,
+    "runtime": 115,
+    "spoken_languages": [
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "Levantem-se juntos ou caiam sozinhos.",
+    "title": "Godzilla e Kong: O Novo Império",
+    "video": false,
+    "vote_average": 7.22,
+    "vote_count": 2733
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/stKGOm8UyhuLPR9sZLjs5AkmncA.jpg",
+    "belongs_to_collection": {
+      "id": 1022790,
+      "name": "Divertida Mente: Coleção",
+      "poster_path": "/Apr19lGxP7gm6y2HQX0kqOXTtqC.jpg",
+      "backdrop_path": "/bR8H6S3Jc2vhPvz2VWX0dQ3XTFV.jpg"
+    },
+    "budget": 200000000,
+    "genres": [
+      { "id": 16, "name": "Animação" },
+      { "id": 10751, "name": "Família" },
+      { "id": 18, "name": "Drama" },
+      { "id": 12, "name": "Aventura" },
+      { "id": 35, "name": "Comédia" }
+    ],
+    "homepage": "",
+    "id": 1022789,
+    "imdb_id": "tt22022452",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Inside Out 2",
+    "overview": "Divertida Mente 2, da Disney e Pixar, volta a entrar na mente da agora adolescente Riley, no momento em que a Sala de Comando passa por uma repentina demolição para dar lugar a algo totalmente inesperado: novas Emoções. Alegria, Tristeza, Raiva, Medo e Nojinho, que há muito tempo comandam uma operação de sucesso, não sabem ao certo como se sentem quando a Ansiedade, a Inveja, o Tédio e a Vergonha chegam.",
+    "popularity": 2538.214,
+    "poster_path": "/9h2KgGXSmWigNTn3kQdEFFngj9i.jpg",
+    "production_companies": [
+      {
+        "id": 3,
+        "logo_path": "/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png",
+        "name": "Pixar",
+        "origin_country": "US"
+      },
+      {
+        "id": 2,
+        "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
+        "name": "Walt Disney Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2024-06-11",
+    "revenue": 0,
+    "runtime": 100,
+    "spoken_languages": [],
+    "status": "Released",
+    "tagline": "Grandes mudanças. Novas emoções.",
+    "title": "Divertida Mente 2",
+    "video": false,
+    "vote_average": 7.4,
+    "vote_count": 90
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg",
+    "belongs_to_collection": null,
+    "budget": 19000000,
+    "genres": [
+      { "id": 16, "name": "Animação" },
+      { "id": 10751, "name": "Família" },
+      { "id": 14, "name": "Fantasia" }
+    ],
+    "homepage": "",
+    "id": 129,
+    "imdb_id": "tt0245429",
+    "origin_country": ["JP"],
+    "original_language": "ja",
+    "original_title": "千と千尋の神隠し",
+    "overview": "Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los",
+    "popularity": 112.758,
+    "poster_path": "/hhoKhsyJ3hFaxEm5pMdZRiTu2lJ.jpg",
+    "production_companies": [
+      {
+        "id": 10342,
+        "logo_path": "/eS79pslnoKbWg7t3PMA9ayl0bGs.png",
+        "name": "Studio Ghibli",
+        "origin_country": "JP"
+      }
+    ],
+    "production_countries": [{ "iso_3166_1": "JP", "name": "Japan" }],
+    "release_date": "2001-07-20",
+    "revenue": 274925095,
+    "runtime": 126,
+    "spoken_languages": [
+      { "english_name": "Japanese", "iso_639_1": "ja", "name": "日本語" }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "A Viagem de Chihiro",
+    "video": false,
+    "vote_average": 8.537,
+    "vote_count": 16009
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/JtN7Q03S3oq7A4KZ7Z3I7m3osP.jpg",
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys: Coleção",
+      "poster_path": "/cTGvYsEwk4nFzSUIGPLlwWrNH11.jpg",
+      "backdrop_path": "/k9hhSHg5GS4UgWQC6MHBOZrarji.jpg"
+    },
+    "budget": 80000000,
+    "genres": [
+      { "id": 28, "name": "Ação" },
+      { "id": 80, "name": "Crime" },
+      { "id": 53, "name": "Thriller" },
+      { "id": 35, "name": "Comédia" }
+    ],
+    "homepage": "",
+    "id": 573435,
+    "imdb_id": "tt4919268",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Bad Boys: Ride or Die",
+    "overview": "Os Bad Boys preferidos do mundo todo estão de volta com a mistura icônica de ação eletrizante e comédia escrachada, mas, dessa vez, com uma virada: os melhores de Miami são agora os mais procurados.",
+    "popularity": 2592.584,
+    "poster_path": "/ak6VZDHms5T4p0eFISk336kqjR6.jpg",
+    "production_companies": [
+      {
+        "id": 122771,
+        "logo_path": "/bYRqVEAuaC1QWmt3hGo0PMdK7EX.png",
+        "name": "Westbrook Studios",
+        "origin_country": "US"
+      },
+      {
+        "id": 5,
+        "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+        "name": "Columbia Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 10288,
+        "logo_path": "/Aszf09kIVXR6cwG9lwjZIawbYVS.png",
+        "name": "Don Simpson/Jerry Bruckheimer Films",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2024-06-05",
+    "revenue": 125673826,
+    "runtime": 110,
+    "spoken_languages": [
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "Os melhores de Miami são agora os mais procurados.",
+    "title": "Bad Boys: Até o Fim",
+    "video": false,
+    "vote_average": 7.02,
+    "vote_count": 247
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/xQkotnzv12fm9FF29if1cBLsyU3.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+      { "id": 53, "name": "Thriller" },
+      { "id": 27, "name": "Terror" },
+      { "id": 28, "name": "Ação" },
+      { "id": 9648, "name": "Mistério" }
+    ],
+    "homepage": "https://www.netflix.com/br/title/81210788",
+    "id": 1001311,
+    "imdb_id": "tt13964390",
+    "origin_country": ["FR"],
+    "original_language": "fr",
+    "original_title": "Sous la Seine",
+    "overview": "Um tubarão gigante apareceu no rio Sena, em Paris. Para evitar a catástrofe, uma cientista vai ter que encarar as tragédias do próprio passado.",
+    "popularity": 2342.816,
+    "poster_path": "/njsyAXtUcPjLCjOfGvtNLH4DHL2.jpg",
+    "production_companies": [
+      {
+        "id": 195537,
+        "logo_path": null,
+        "name": "Full Players",
+        "origin_country": "FR"
+      },
+      {
+        "id": 220755,
+        "logo_path": null,
+        "name": "Let Me Be",
+        "origin_country": "FR"
+      }
+    ],
+    "production_countries": [{ "iso_3166_1": "FR", "name": "France" }],
+    "release_date": "2024-06-05",
+    "revenue": 0,
+    "runtime": 102,
+    "spoken_languages": [
+      { "english_name": "French", "iso_639_1": "fr", "name": "Français" }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Sob as Águas do Sena",
+    "video": false,
+    "vote_average": 5.769,
+    "vote_count": 427
+  }
+]
