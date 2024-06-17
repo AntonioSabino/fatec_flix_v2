@@ -1,13 +1,14 @@
 import { useState } from 'react'
-
 import { useNavigate } from 'react-router-dom'
 import './Signin.css'
+
 
 export function SignIn() {
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
 
 	const navigate = useNavigate()
+  
 
 	const handleSignIn = () => {
 		const myHeaders = new Headers()
@@ -25,10 +26,18 @@ export function SignIn() {
 		fetch('http://localhost:8080/fatec/api/login.php', myInit)
 			.then((response) => response.json())
 			.then((data) => {
-				if (data[0] && data[0].user_name === username) {
-					const user = { username, isLoggedIn: true }
-
-					localStorage.setItem('user', JSON.stringify(user))
+        if (data[0] && data[0].user_name === username) {
+          const user = {
+            id : data[0].id,
+            username: data[0].user_name,
+            user_email: data[0].email,
+            bio: data[0].bio? data[0].bio : "",
+            instagram: data[0].instagram? data[0].instagram : "",
+            facebook: data[0].facebook? data[0].facebook : "",
+            twitter: data[0].twitter? data[0].twitter : "",
+            isLoggedIn: true,
+          };
+          localStorage.setItem('user', JSON.stringify(user))
 
 					user.username === 'admin' ? navigate('/admin') : navigate('/')
 				} else {

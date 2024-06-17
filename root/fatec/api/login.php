@@ -13,7 +13,7 @@ if ($method === 'POST') {
   $user_email = $data['user_email'];
   $password = $data['password'];
 
-  $sql = mysql_query("SELECT user_name FROM users WHERE (user_name = '$user_email' OR email = '$user_email') AND password = '$password'");
+  $sql = mysql_query("SELECT id, user_name, email, bio, instagram, facebook, twitter FROM users WHERE (user_name = '$user_email' OR email = '$user_email') AND password = '$password'");
 
   $user_data = mysql_fetch_assoc($sql);
 
@@ -21,7 +21,6 @@ if ($method === 'POST') {
     $response = array(
       $user_data
     );
-
     echo json_encode($response);
   } else {
     http_response_code(401);
