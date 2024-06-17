@@ -1,8 +1,10 @@
 import './Header.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from './../../assets/logo2.png.png'
 
 export default function Header() {
+	const navigate = useNavigate()
+
 	return (
 		<header className='header'>
 			<div className='header-container'>
@@ -23,14 +25,33 @@ export default function Header() {
 						</li>
 					</ul>
 				</nav>
-				<img
-					className='logout'
-					src='img/logout.png'
-					onClick={() => {
-						localStorage.clear()
-						window.location.reload()
+				<div
+					style={{
+						display: 'flex',
+						width: 100,
+						alignItems: 'center',
+						justifyContent: 'space-around',
 					}}
-				/>
+				>
+					<img
+						src='https://cdn-icons-png.flaticon.com/64/3237/3237472.png'
+						alt='user-icon'
+						className='icon'
+						onClick={() => {
+							navigate('/profile')
+						}}
+					/>
+					<img
+						className='icon'
+						src='img/logout.png'
+						onClick={() => {
+							if (window.confirm('Deseja realmente sair?')) {
+								localStorage.removeItem('user')
+								window.location.reload()
+							}
+						}}
+					/>
+				</div>
 			</div>
 		</header>
 	)
