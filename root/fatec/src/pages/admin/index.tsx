@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
 interface User {
+	id: string
 	user_name: string
 	email: string
 }
@@ -40,8 +41,6 @@ function Admin() {
 	}
 
 	const handleSave = () => {
-		console.log('Save user:', editedUser)
-
 		const myHeaders = new Headers()
 		myHeaders.append('Content-Type', 'application/json')
 
@@ -56,7 +55,7 @@ function Admin() {
 			.then((data) => {
 				if (data.status === 200) {
 					const updatedUsers = users.map((user) => {
-						if (user.user_name === editedUser?.user_name) {
+						if (user.id === editedUser?.id) {
 							return editedUser
 						}
 						return user
@@ -76,8 +75,6 @@ function Admin() {
 	}
 
 	const handleDelete = (userName: string) => {
-		console.log('Delete user:', userName)
-
 		const myHeaders = new Headers()
 		myHeaders.append('Content-Type', 'application/json')
 
@@ -149,8 +146,12 @@ function Admin() {
 								</>
 							) : (
 								<>
-									<h2>{u.user_name}</h2>
-									<p>{u.email}</p>
+									<h2>
+										<strong>Nome:</strong> {u.user_name}
+									</h2>
+									<p>
+										<strong>Email:</strong> {u.email}
+									</p>
 								</>
 							)}
 						</div>

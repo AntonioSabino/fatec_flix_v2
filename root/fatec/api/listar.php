@@ -10,7 +10,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'GET') {
   $data = json_decode(file_get_contents('php://input'), true);
 
-  $sql = mysql_query("SELECT user_name, email FROM users");
+  $sql = mysql_query("SELECT id, user_name, email FROM users");
 
   $data = array();
 

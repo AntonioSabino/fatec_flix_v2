@@ -10,10 +10,11 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'PUT') {
   $data = json_decode(file_get_contents('php://input'), true);
 
+  $user_id = $data['id'];
   $user_name = $data['user_name'];
   $user_email = $data['email'];
 
-  $sql = mysql_query("UPDATE users SET user_name = '$user_name', email = '$user_email' WHERE user_name = '$user_name'");
+  $sql = mysql_query("UPDATE users SET user_name = '$user_name', email = '$user_email' WHERE id = '$user_id'");
 
   if ($sql) {
     $response = array(
