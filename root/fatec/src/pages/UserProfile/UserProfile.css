@@ -1,0 +1,108 @@
+.user-profile-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.user-info-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-info-surface {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 4px solid #2b2b2b
+}
+
+
+.user-info-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info-container h1 {
+  color: #ffffff;
+  font-size: 24px;
+
+  text-align: center;
+}
+
+.user-pfp {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.user-pfp :hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.text-area {
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #131314;
+  color: #9e9e9e;
+  resize: none;
+}
+
+.button-salvar {
+  width: 100px;
+  background-color: #00b0ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+  display: hidden;
+}
+
+.text-area:focus {
+  outline: none;
+  border: 1px solid #00b0ff;
+  background-color: #2b2b2b59;
+  .button-salvar {
+    display: block;
+  }
+}
+
+.button-logout {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.button-logout:hover {
+  background-color: #d32f2f;
+}
+
+.user-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #00aeff7a;
+  padding: 20px;
+  border-radius: 5px;
+  border: 4px solid #00aeff;
+}

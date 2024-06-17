@@ -6,6 +6,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import MovieDetail from './components/MovieDetail'
 import FavoriteMovies from './pages/FavoriteMovies'
 import Admin from './pages/admin'
+import UserProfile from './pages/UserProfile'
 
 const AppRouter = () => {
 	return (
@@ -38,6 +39,10 @@ const AppRouter = () => {
 					<Route
 						path='/movie/:id'
 						element={<MovieDetail />}
+					/>
+					<Route
+						path='/profile'
+						element={<UserProfile />}
 					/>
 				</Route>
 			</Routes>
