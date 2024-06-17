@@ -29,4 +29,3 @@ if ($method === 'GET') {
         echo json_encode($response);
     }
 }
-?>

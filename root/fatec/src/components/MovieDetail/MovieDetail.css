@@ -1,27 +1,24 @@
 .movie-detail-container {
 	display: flex;
 	margin: 20px;
-  gap: 20px;
+	gap: 20px;
 }
 
-
-
 .movie-detail-backdrop {
-  position: absolute;
-  background-size: contain;
-  width: 100%;
-  height: 90vh;
-  z-index: -1;
-  margin:  0px 0% 0% 0%;
-  filter: blur(20px);
-  box-shadow: inset 0 0 200px 250px #000;
+	position: absolute;
+	background-size: contain;
+	width: 100%;
+	height: 90vh;
+	z-index: -1;
+	margin: 0px 0% 0% 0%;
+	filter: blur(20px);
+	box-shadow: inset 0 0 200px 250px #000;
 }
 
 .movie-detail-poster {
-  height: 40%;
-  border: outset 2px #fff;
-  
-}	
+	height: 40%;
+	border: outset 2px #fff;
+}
 
 .movie-detail-info {
 	width: 40%;
@@ -45,38 +42,38 @@
 }
 
 .providers-info h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  border-left: outset 2px #fff;
-  border-bottom: outset 2px #fff;
-  background-color: #272727;
-  width: 400px;
-  padding: 10px;
+	font-size: 24px;
+	margin-bottom: 10px;
+	border-left: outset 2px #fff;
+	border-bottom: outset 2px #fff;
+	background-color: #272727;
+	width: 400px;
+	padding: 10px;
 }
 
 .movie-detail-info2 {
-  margin-bottom: 10px;
-  
+	margin-bottom: 10px;
 }
 .movie-detail-info2 span {
-  text-align: center;
-  display: flex;
-  align-items: start;
+	text-align: center;
+	display: flex;
+	align-items: start;
 }
 
 .movie-detail-info2 img {
-  width: 20px;
+	width: 20px;
 }
 
 .provider-logo {
 	width: 50px;
 	height: auto;
 	margin-right: 10px;
-  border: outset 2px #fff;
+	border: outset 2px #fff;
 }
 
 .add-to-favorites,
-.remove-from-favorites {
+.remove-from-favorites,
+.add-comment-button {
 	padding: 10px 20px;
 	font-size: 16px;
 	border-radius: 8px;
@@ -86,7 +83,12 @@
 	margin-bottom: 10px;
 }
 
-.add-to-favorites {
+.add-comment-button {
+	margin-left: 20px;
+}
+
+.add-to-favorites,
+.add-comment-button {
 	background-color: #2ecc71;
 }
 
@@ -95,29 +97,112 @@
 }
 
 .comments-container {
- display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
 }
 
 .comments {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .comment {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  border: outset 2px #fff;
-  background-color: #2727276b;
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	border: outset 2px #fff;
+	background-color: #2727276b;
 }
 
 .comment img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px;
+	background-color: #272727;
+	border: outset 2px #fff;
+	border-radius: 8px;
+	max-width: 600px;
+	margin: 20px 0;
+}
+
+.comment-form h2 {
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.comment-form label {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	color: #fff;
+}
+
+.comment-form input,
+.comment-form textarea {
+	padding: 10px;
+	border: outset 2px #fff;
+	border-radius: 4px;
+	background-color: #3a3a3a;
+	color: #fff;
+	font-size: 16px;
+}
+
+.comment-form button {
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 8px;
+	color: #fff;
+	background-color: #2ecc71;
+	border: none;
+	cursor: pointer;
+}
+
+.comment-form button:hover {
+	background-color: #27ae60;
+}
+
+/* Estilo do Modal */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background-color: #272727;
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 600px;
+	width: 100%;
+	border: outset 2px #fff;
+	position: relative;
+}
+
+.modal-close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}

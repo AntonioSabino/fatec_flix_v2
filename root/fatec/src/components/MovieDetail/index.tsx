@@ -4,6 +4,7 @@ import { Movie, MovieLink } from '../../interfaces/movie.interface'
 import { fetchMovieDetails, fetchMovieWatchProviders } from '../../utils/api'
 import './MovieDetail.css'
 import Comments from './Comments'
+import CommentFormModal from './CommentFormModal'
 
 export interface Comment {
 	id: number
@@ -19,6 +20,7 @@ const MovieDetail = () => {
 	const [providers, setProviders] = useState<MovieLink>({} as MovieLink)
 	const [isInFavorites, setIsInFavorites] = useState(false)
 	const [comments, setComments] = useState<Comment[]>([])
+	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	const links = [
 		{
@@ -72,6 +74,24 @@ const MovieDetail = () => {
 			link: 'https://www.telecine.com.br/',
 		},
 	]
+
+	const fetchComments = () => {
+		const myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/json')
+
+		fetch(
+			`http://localhost:8080/fatec/api/listar_comentarios.php?movie_id=${id}`,
+			{
+				method: 'GET',
+				headers: myHeaders,
+			}
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data)
+				setComments(data)
+			})
+	}
 
 	useEffect(() => {
 		const myHeaders = new Headers()
@@ -272,6 +292,19 @@ const MovieDetail = () => {
 						</div>
 					</div>
 				</div>
+				<button
+					onClick={() => setIsModalOpen(true)}
+					className='add-comment-button'
+				>
+					Adicionar Comentário
+				</button>
+
+				<CommentFormModal
+					movieId={Number(id)}
+					isOpen={isModalOpen}
+					onClose={() => setIsModalOpen(false)}
+					onCommentAdded={() => fetchComments()}
+				/>
 				<Comments comments={comments} />
 			</>
 		)
