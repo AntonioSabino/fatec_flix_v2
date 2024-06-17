@@ -21,6 +21,9 @@ const MovieDetail = () => {
 	const [isInFavorites, setIsInFavorites] = useState(false)
 	const [comments, setComments] = useState<Comment[]>([])
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [favorites, setFavorites] = useState([] as number[])
+
+	const user = JSON.parse(localStorage.getItem('user') || '{}')
 
 	const links = [
 		{
@@ -127,40 +130,95 @@ const MovieDetail = () => {
 	}, [id])
 
 	useEffect(() => {
-		const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
-		setIsInFavorites(favorites.some((fav: Movie) => fav.id === movieDetails.id))
-	}, [movieDetails.id])
+		const myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/json')
+
+		const myInit = {
+			method: 'GET',
+			headers: myHeaders,
+		}
+
+		fetch(
+			`http://localhost:8080/fatec/api/listar_favoritos.php?user_name=${user.username}`,
+			myInit
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data)
+				setFavorites(data)
+			})
+	}, [user.username])
+
+	useEffect(() => {
+		console.log(favorites.length)
+
+		const isInFavorites = favorites.some((fav) => fav == Number(id))
+
+		console.log(isInFavorites)
+
+		setIsInFavorites(isInFavorites)
+	}, [favorites, id])
 
 	const handleAddToFavorites = () => {
-		const user = JSON.parse(localStorage.getItem('user') || '{}')
 		if (user.isLoggedIn) {
-			const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
+			const myHeaders = new Headers()
+			myHeaders.append('Content-Type', 'application/json')
 
-			if (!isInFavorites) {
-				favorites.push(movieDetails)
-
-				localStorage.setItem('favorites', JSON.stringify(favorites))
-			} else {
-				console.log('O filme já está na lista de favoritos.')
-				handleRemoveFromFavorites()
+			const myInit = {
+				method: 'POST',
+				headers: myHeaders,
+				body: JSON.stringify({
+					user_name: user.username,
+					movie_id: Number(id),
+				}),
 			}
-			setIsInFavorites(!isInFavorites)
+
+			fetch('http://localhost:8080/fatec/api/adicionar_favorito.php', myInit)
+				.then(() => {
+					setIsInFavorites(true)
+				})
+				.catch((error) => {
+					console.error('Error adding favorite:', error)
+					alert('Erro ao tentar adicionar filme aos favoritos.')
+				})
+
+			const updatedFavorites = [...favorites, Number(id)]
+
+			setFavorites(updatedFavorites)
 		} else {
 			console.log('O usuário não está logado.')
 		}
 	}
 
 	const handleRemoveFromFavorites = () => {
-		const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
-		const updatedFavorites = favorites.filter(
-			(fav: Movie) => fav.id !== movieDetails.id
-		)
+		if (user.isLoggedIn) {
+			const myHeaders = new Headers()
+			myHeaders.append('Content-Type', 'application/json')
 
-		localStorage.setItem('favorites', JSON.stringify(updatedFavorites))
+			const myInit = {
+				method: 'DELETE',
+				headers: myHeaders,
+				body: JSON.stringify({
+					user_name: user.username,
+					movie_id: Number(id),
+				}),
+			}
 
-		console.log('Filme removido dos favoritos.')
+			fetch('http://localhost:8080/fatec/api/remover_favorito.php', myInit)
+				.then(() => {
+					setIsInFavorites(false)
+				})
+				.catch((error) => {
+					console.error('Error removing favorite:', error)
+					alert('Erro ao tentar remover filme dos favoritos.')
+				})
 
-		setIsInFavorites(!isInFavorites)
+			const updatedFavorites = favorites.filter((fav) => fav !== Number(id))
+
+			setFavorites(updatedFavorites)
+		} else {
+			console.log('O usuário não está logado.')
+		}
 	}
 
 	const findLink = (providerId: number, movieId: number) => {
